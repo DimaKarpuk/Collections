@@ -1,7 +1,5 @@
 package org.example;
 
-import java.util.Set;
-
 public class Goods {
     public final String name;
     public final Integer width,

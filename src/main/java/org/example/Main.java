@@ -1,11 +1,9 @@
 package org.example;
 
-import java.util.HashSet;
-
 public class Main {
     public static void main(String[] args) {
-        Box bigBox = new Box("bigBox", 400, 600, 800, new HashSet<>());
-        Box smallBox = new Box("smallBox",200, 400, 600, new HashSet<>());
+        Box bigBox = new BigBox("bigBox", 400, 600, 800);
+        Box smallBox = new SmallBox("smallBox",200, 400, 600);
 
         Goods chair = new Goods("chair", 290, 440, 630);
         Goods toy = new Goods("toy", 100, 300, 450);
@@ -13,19 +11,20 @@ public class Main {
         Goods iron = new Goods("iron", 20, 40, 35);
 
 
-        bigBox.putInABox(chair);
-        smallBox.putInABox(chair);
-        bigBox.putInABox(toy);
-        smallBox.putInABox(toy);
-        bigBox.putInABox(locker);
-        smallBox.putInABox(locker);
-        bigBox.putInABox(iron);
-        smallBox.putInABox(iron);
+        ((BigBox) bigBox).putInABigBox(chair);
+        ((BigBox) bigBox).putInABigBox(toy);
+        ((BigBox) bigBox).putInABigBox(locker);
+        ((BigBox) bigBox).putInABigBox(iron);
+        ((BigBox) bigBox).searchBigBoxGoods(chair);
+        ((BigBox) bigBox).deleteBigBoxGoods(chair);
 
-        smallBox.searchGoods(chair);
-        bigBox.searchGoods(chair);
 
-        smallBox.deleteGoods(chair);
-        bigBox.deleteGoods(chair);
+        ((SmallBox) smallBox).putInASmallBox(chair);
+        ((SmallBox) smallBox).putInASmallBox(toy);
+        ((SmallBox) smallBox).putInASmallBox(locker);
+        ((SmallBox) smallBox).putInASmallBox(iron);
+        ((SmallBox) smallBox).searchSmallBoxGoods(chair);
+        ((SmallBox) smallBox).deleteSmallBoxGoods(toy);
+
     }
 }
