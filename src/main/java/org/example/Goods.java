@@ -1,10 +1,13 @@
 package org.example;
 
+import java.util.Set;
+
 public class Goods {
-    String name;
-    Integer width; // (ширина)
-    Integer height;// (высота)
-    Integer depth;// (глубина)
+    public final String name;
+    public final Integer width,
+    height,
+    depth;
+
 
     public Goods(String name, Integer width, Integer height, Integer depth) {
         this.name = name;
@@ -12,4 +15,5 @@ public class Goods {
         this.height = height;
         this.depth = depth;
     }
+
 }
