@@ -36,4 +36,8 @@ public class BigBox extends Box {
         }
         return goods.name;
     }
+    public Set<String> stringSet(){
+        System.out.println("В bigBox лежит " + goodsSet+"\n");
+        return null;
+    }
 }

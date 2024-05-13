@@ -36,4 +36,8 @@ public class SmallBox extends Box{
         }
         return goods.name;
     }
+    public List<String> stringList(){
+        System.out.println("В smallBox лежит " + goodsList +"\n");
+        return null;
+    }
 }
