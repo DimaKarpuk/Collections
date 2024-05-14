@@ -15,7 +15,7 @@ public class MiddleBox extends Box {
             goodsQueue.add(goods.name);
             System.out.println("В " + name + " помещается " + goods.name);
         }
-        return name;
+        return null;
     }
     public String searchMiddleBoxGoods(Goods goods){
         if (goodsQueue.contains(goods.name)) {
@@ -24,16 +24,16 @@ public class MiddleBox extends Box {
             System.out.println("В контейнере " + name + " отсутствует " + goods.name);
 
         }
-        return goods.name;
+        return null;
     }
     public String deleteMiddleBoxGoods(){
         while (!goodsQueue.isEmpty()) {
             System.out.println("Удаляем из "+ name + " первый в очереди товар " + goodsQueue.poll());
             break;
         }
-        return name;
+        return null;
     }
-    public List<MiddleBox> middleBoxList(){
+    public List<MiddleBox> middleBoxQueue(){
         System.out.println("В middleBox лежит " + goodsQueue+"\n");
         return null;
     }

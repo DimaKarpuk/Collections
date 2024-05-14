@@ -18,7 +18,7 @@ public class SmallBox extends Box{
             goodsList.add(goods.name);
             System.out.println("В " + name + " помещается " + goods.name);
         }
-        return name;
+        return null;
     }
     public String searchSmallBoxGoods(Goods goods){
         if (goodsList.contains(goods.name)) {
@@ -27,14 +27,14 @@ public class SmallBox extends Box{
             System.out.println("В контейнере " + name + " отсутствует " + goods.name);
 
         }
-        return goods.name;
+        return null;
     }
     public String deleteSmallBoxGoods(Goods goods){
         while (goodsList.contains(goods.name)){
             goodsList.remove(goods.name);
             System.out.println("Удаляем из " + name + " " + goods.name);
         }
-        return goods.name;
+        return null;
     }
     public List<String> stringList(){
         System.out.println("В smallBox лежит " + goodsList +"\n");

@@ -18,7 +18,7 @@ public class BigBox extends Box {
             goodsSet.add(goods.name);
             System.out.println("В " + name + " помещается " + goods.name);
         }
-        return name;
+        return null;
     }
     public String searchBigBoxGoods(Goods goods){
         if (goodsSet.contains(goods.name)) {
@@ -27,14 +27,14 @@ public class BigBox extends Box {
             System.out.println("В контейнере " + name + " отсутствует " + goods.name);
 
         }
-        return goods.name;
+        return null;
     }
     public String deleteBigBoxGoods(Goods goods){
         while (goodsSet.contains(goods.name)){
             goodsSet.remove(goods.name);
             System.out.println("Удаляем из " + name + " " + goods.name);
         }
-        return goods.name;
+        return null;
     }
     public Set<String> stringSet(){
         System.out.println("В bigBox лежит " + goodsSet+"\n");

@@ -1,5 +1,7 @@
 package org.example;
 
+import java.util.HashMap;
+
 public class Goods {
     public final String name;
     public final Integer width,
